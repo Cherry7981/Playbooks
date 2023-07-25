@@ -1,0 +1,9 @@
+---
+- name: playbook for group creation
+  hosts: all
+  become: yes
+  tasks:
+  - name: Create a group
+    group:
+      name: Ansible
+      mode: 0666
