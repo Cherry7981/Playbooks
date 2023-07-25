@@ -1,0 +1,11 @@
+---
+ - name: playbook for cresting directory
+   hosts: all
+   become: yes
+
+   tasks:
+   - name: create a dir 
+     file:
+       name: cherry
+       path: /home/ansadmin
+       state: directory 

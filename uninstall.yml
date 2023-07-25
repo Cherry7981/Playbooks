@@ -1,0 +1,14 @@
+---
+- name: unistall package
+  hosts: all
+  become: yes
+  tasks:
+    - name: stop service
+      service:
+         name: httpd
+         state: stopped
+
+    - name: stop service
+      yum:
+         name: httpd
+         state: absent

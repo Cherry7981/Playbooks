@@ -1,0 +1,14 @@
+---
+- name: rmv package
+  hosts: all
+  become: yes
+  tasks:
+    - name: rmv packages
+      yum:
+        name: httpd
+        state: absent
+
+    - name: rmv index
+      file:
+        name: index.html
+        state: absent
